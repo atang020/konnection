@@ -1,26 +1,43 @@
-## UCSD Circle K Konnection
+## UCSD Circle K's Konnection
 
-UCSD Circle K Konnection is built using the Laravel framework to serve the needs of the Circle K International chapter at the University of California, San Diego. However, we encourage the reuse and retooling of our platform for other organizational needs.
+This project is UCSD Circle K's official website.
 
-### Packages Used
+---
 
-#### Production
-* [zizaco/entrust](https://github.com/Zizaco/entrust) - Roles and permissions
-* [dingo/api](https://github.com/dingo/api) - API
-* [anahkiasen/rocketeer](http://rocketeer.autopergamene.eu) - Deployment
-* [tappleby/laravel-auth-token](https://github.com/tappleby/laravel-auth-token) - Auth token system
+## Requirements
 
-#### Development
-* [way/generators](https://github.com/JeffreyWay/Laravel-4-Generators)
-* [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-* [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
-* [fzaninotto/faker](https://github.com/fzaninotto/faker) - Fake data generator for seeding
-* [phpdocumentor/phpdocumentor](http://www.phpdoc.org)
-* [phpunit/phpunit](http://phpunit.de)
-* [codeception/codeception](http://codeception.com) - Full-stack PHP testing framework
-* [codeception/specify](https://github.com/Codeception/Specify) - BDD style code blocks for tests
-* [codeception/verify](https://github.com/Codeception/Verify) - BDD assertions for tests
+* PHP
+* Composer
+* NodeJS + npm
+* Bower
+* Gulp
 
-### License
+#### Installing NodeJS & NPM
 
-UCSD Circle K Konnection is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT)
+If you don't already have node and npm installed, visit [the node website](http://nodejs.org/) to download and install the proper package. npm comes standard with node as a package so no need to install it separately.
+
+#### Setting up Bower
+
+Once you have npm, you can use it to install bower.
+
+`npm install -g bower`
+
+#### Installing npm packages
+
+Use this command to install the required packages:
+
+`npm install`
+
+#### Installing PHP dependencies
+
+Use this command to install the required PHP packages:
+
+`composer install`
+
+---
+
+### Getting started
+
+1. To compile frontend assets (JavaScript + SASS), run `gulp`.
+2. To have gulp watch your work and recompile files as necessary, run `gulp watch` instead. (optional)
+
