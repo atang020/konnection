@@ -1,0 +1,23 @@
+button,
+input[type="submit"],
+.button {
+  @extend %button;
+  @include appearance(none);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.emphasis {
+    background-color: $emphasis-color;
+
+    &:hover {
+      background-color: darken($emphasis-color, 5%);
+    }
+  }
+
+  &.danger {
+    background-color: $red;
+  }
+}

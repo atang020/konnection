@@ -1,0 +1,160 @@
+#content {
+  #main {
+
+    padding: 20px 10px 10px 10px;
+    height: 100%;
+
+    h2 {
+      margin-top: .2em;
+      padding-top: .3em;
+      padding-bottom: .3em;
+      margin-bottom: .3em;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  #welcome-view {
+    @include fill-parent;
+    @include row(table);
+
+    @include sharp-gradient($lightest-green, $light-green); // genius
+
+    overflow: hidden;
+
+    .text {
+      @include span-columns(8);
+      @include pad();
+
+      padding: 10px 10px 10px 10px;
+
+      transform: skewX(-20deg);
+      * { transform: skewX(20deg) }
+
+      margin-right: 0;
+
+      .right {
+        text-align: right;
+      }
+
+      .center {
+
+        a {
+          color: $light-green;
+
+          &:hover {
+            color: $medium-green;
+          }
+        }
+
+        text-align: center;
+      }
+    }
+
+    h3 {
+      color: $emphasis-color;
+      padding-left: 30px;
+      padding-bottom: 5px;
+    }
+
+    .links {
+      @include span-columns(4);
+      @include reset-display;
+      @include pad();
+
+      background-color: $light-green;
+
+      transform: skewX(-20deg);
+
+      div {
+        transform: skewX(20deg);
+        text-align: center;
+
+        &:nth-child(2) {
+          margin-top: 20px;
+          padding-left: 50px;
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  #week-view, #announcements-view, #welcome-view {
+    @include fill-parent;
+  }
+
+  #week-view {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .button-text {
+    color: #ffffff;
+  }
+
+  .pulse-repeat {
+    animation: pulse 1s infinite;
+  }
+
+  #announcements-view {
+    background-color: $lightest-green;
+
+    padding: 20px 40px 20px 40px;
+
+    div:first-child {
+      @include fill-parent;
+
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      height: 90px;
+      background-color: $emphasis-color;
+      text-align: center;
+
+      h2 {
+        color: white;
+        line-height: 90px;
+      }
+    }
+  }
+}
+
+.announcements {
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px;
+
+  h3, h4, h5, h6 {
+    color: $base-font-color;
+  }
+
+  h3 {
+    padding-top: 10px;
+    text-align: center;
+
+    small {
+      color: $medium-gray;
+      font-size: .7em;
+    }
+  }
+
+  .date {
+    text-align: center;
+    font-style: italic;
+    color: $medium-gray;
+  }
+
+  article {
+    border-bottom: 2px solid $light-gray;
+    padding: 5px 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
